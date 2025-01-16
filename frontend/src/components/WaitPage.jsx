@@ -9,28 +9,34 @@ const WaitPage = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-  
 
     useEffect(() => {
-
-        const queryParamas = new URLSearchParams(window.location.search)
-        const token = queryParamas.get('token');
-
+        const queryParams = new URLSearchParams(window.location.search);
+        const token = queryParams.get('token');
+    
         if (token) {
-            console.log("AuthToken", token)
-            const decodedToken = jwtDecode(token)
-            console.log(decodedToken.user)
-            dispatch(signInSuccess(decodedToken.user))
-
-            
-          navigate("/dashbord")
-  
-
-        } 
-           
-        
-
-    }, [])
+            try {
+                console.log("AuthToken", token);
+                const decodedToken = jwtDecode(token);
+                console.log(decodedToken.user);
+    
+                // Dispatch the decoded user data
+                dispatch(signInSuccess(decodedToken.user));
+    
+                // Navigate to the dashboard
+                navigate("/dashbord");
+            } catch (error) {
+                console.error("Error decoding token:", error);
+                dispatch(signInFailure("Invalid token"));
+                navigate("/login"); // Redirect to login on error
+            }
+        } else {
+            console.warn("No token found in the URL");
+            dispatch(signInFailure("Token missing"));
+            navigate("/login"); // Redirect to login if no token
+        }
+    }, []);
+    
 
 
 
