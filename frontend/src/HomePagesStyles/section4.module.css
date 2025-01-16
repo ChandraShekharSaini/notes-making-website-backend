@@ -1,0 +1,125 @@
+.section4Container {
+  width: 100%;
+  height: 80vh;
+  background-color: rgb(0, 93, 19);
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: 100%;
+  grid-template-areas: 'one two three';
+}
+
+.svg1 {
+  grid-area: one;
+  
+}
+
+.svg1 img {
+  width: 15vw;
+}
+
+.section4SubCon {
+  grid-area: two;
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.section4SubCon h1 {
+  color: white;
+  font-size: 72px;
+  font-weight: 400;
+  font-family: sans-serif 'karma';
+}
+
+.section4SubCon p {
+  font-size: 20px;
+  color: rgb(223, 230, 218);
+  font-weight: 400;
+}
+
+.section4SubCon button {
+  padding: 20px 40px;
+  color: black;
+  background-color: rgb(249, 246, 242);
+  font-size: 17px;
+  font-weight: 550px;
+  border-radius: 5px;
+
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.section4SubCon button:hover {
+  box-shadow: 7px 8px 1px black;
+  cursor: pointer;
+}
+
+.svg2 {
+  grid-area: three;
+  
+  position: relative;
+}
+
+.svg2 img {
+  width: 15vw;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .section4Container {
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'one';
+     
+    padding: 20px 0;  
+  }
+
+  .svg1 {
+    display: none;
+  }
+
+  .section4SubCon {
+     grid-area: one; 
+   
+    padding: 0 20px;
+  }
+
+  .section4SubCon h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: -20px;
+  }
+
+  .section4SubCon p {
+    font-size: 20px;
+    color: rgb(223, 230, 218);
+    font-weight: 400;
+  }
+
+  .section4SubCon button {
+    padding: 20px 40px;
+    color: black;
+    background-color: rgb(249, 246, 242);
+    font-size: 17px;
+    font-weight: 550px;
+    border-radius: 5px;
+
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .section4SubCon button:hover {
+    box-shadow: 7px 8px 1px black;
+    cursor: pointer;
+  }
+
+  .svg2 {
+    display: none;
+  }
+}

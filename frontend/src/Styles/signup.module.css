@@ -1,0 +1,315 @@
+.signupPage {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: none;
+  grid-template-columns: 50% 40%;
+  grid-template-areas: 'one two';
+}
+
+.signupColumn {
+  grid-area: one;
+  /* border: 1px solid hotpink; */
+
+  padding: 90px 150px 0 150px;
+}
+
+.signupSubCol {
+  /* border: 1px solid gainsboro; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  line-height: 0;
+}
+
+.signupSubCol img {
+  width: 60px;
+}
+
+.signupSubCol h1 {
+  font-size: 32px;
+  margin-top: 30px;
+}
+
+.signupSubCol p {
+  font-size: 16px;
+}
+
+.signuInputs {
+  /* border: 1px solid hotpink; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+
+.continuousBtn {
+  border-radius: 2px;
+  border: 0;
+  cursor: pointer;
+}
+
+.horizontalrule {
+  display: flex;
+  color: rgb(179, 179, 179);
+}
+
+hr {
+  width: 45%;
+
+  height: 0.5px;
+}
+
+.signuInputs input {
+  width: 30vw;
+
+  padding: 15px 0;
+  padding-left: 10px;
+  border: 2px solid rgb(136, 147, 151);
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.signuInputs input:focus {
+  outline: none;
+
+  border: 2px solid rgb(32, 156, 227);
+  background-color: rgb(232, 240, 254);
+}
+
+.signuInputs .continuousBtn {
+  width: 29vw;
+  border-radius: 5px;
+  background-color: rgb(77, 100, 255);
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.signuInputs .continuousBtn:hover {
+  background-color: rgb(50, 69, 187);
+}
+
+.authBtn button {
+  width: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border: 0.5px solid rgb(136, 147, 151);
+  padding: 10px 0;
+  background-color: white;
+  color: rgb(118, 118, 118);
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Euclid Circular A', 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
+  cursor: pointer;
+}
+
+.authBtn button:hover {
+  background-color: rgb(242, 242, 242);
+}
+
+.authBtn {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.svgLogo {
+  width: 25px;
+}
+.terms,
+.terms-login {
+  color: rgb(143, 143, 143);
+}
+
+.termsLogin {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(145, 145, 145);
+  text-decoration: none;
+}
+
+.terms span,
+.termsLogin span {
+  color: rgb(79, 102, 255);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.termsLogin span,
+.termsLogin a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signupPageImage {
+  grid-area: two;
+}
+
+.signupPageImage img {
+  width: 90%;
+  height: 97vh;
+}
+
+@media only screen and (max-width: 500px) {
+  .signupPage {
+    /* display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'one'; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+  }
+
+  .signupColumn {
+    padding: 50px 30px;
+  }
+
+  .signupSubCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .signupSubCol img {
+    width: 50px;
+  }
+
+  .signupSubCol h1 {
+    font-size: 25px;
+    margin-top: 30px;
+  }
+
+  .signupSubCol p {
+    font-size: 18px;
+  }
+
+  .signuInputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .continuousBtn {
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .horizontalrule {
+    display: flex;
+    color: rgb(179, 179, 179);
+  }
+
+  hr {
+    width: 45%;
+
+    height: 0.5px;
+  }
+
+  .signuInputs input {
+    width: 75vw;
+    font-size: 15px;
+    padding: 15px 0;
+    padding-left: 10px;
+    border: 2px solid rgb(136, 147, 151);
+    border-radius: 5px;
+    outline: none;
+
+    border: 2px solid rgb(32, 156, 227);
+    background-color: rgb(232, 240, 254);
+  }
+
+  .signuInputs .continuousBtn {
+    width: 80vw;
+    border-radius: 5px;
+    background-color: rgb(77, 100, 255);
+    color: white;
+    padding: 15px;
+
+    font-size: 20px;
+  }
+
+  .signuInputs .continuousBtn:hover {
+    background-color: rgb(50, 69, 187);
+  }
+
+  .authBtn button {
+    width: 76vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 0.5px solid rgb(136, 147, 151);
+    padding: 10px 0;
+    background-color: white;
+    color: rgb(118, 118, 118);
+    font-size: 15px;
+    font-weight: 599;
+    font-family: 'Euclid Circular A', 'Helvetica Neue', Helvetica, Arial,
+      sans-serif;
+    cursor: pointer;
+  }
+
+  .authBtn button:hover {
+    background-color: rgb(242, 242, 242);
+  }
+
+  .authBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .svgLogo {
+    width: 25px;
+  }
+
+  .terms {
+    display: none;
+  }
+
+  .terms-login {
+    color: rgb(143, 143, 143);
+  }
+
+  .termsLogin {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(145, 145, 145);
+    text-decoration: none;
+  }
+
+  .termsLogin span {
+    color: rgb(79, 102, 255);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .termsLogin span,
+  .termsLogin a {
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .signupPageImage {
+    display: none;
+  }
+}

@@ -1,0 +1,236 @@
+.contactus {
+  width: 100%;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 45% 55%;
+  grid-template-rows: 100%;
+  grid-template-areas: 'one two';
+}
+
+.contactLeft {
+  grid-area: one;
+
+  display: flex;
+  flex-direction: column;
+  padding: 100px 200px;
+  background-color: white;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.LeftRobot {
+  position: absolute;
+  width: 170px;
+  right: 0;
+  bottom: 0;
+  transform: rotateY(175deg);
+}
+
+.contactLeft h1 {
+  font-size: 28px;
+}
+
+.contactLeft p {
+  margin-top: -10px;
+  font-size: 16px;
+  font-family:"karma";
+  line-height: 1.3;
+}
+
+.contactInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactInputs button {
+  background-color: rgb(0, 136, 71);
+  color: white;
+  font-size: 16px;
+  width: 100px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  padding: 10px 10px;
+  font-weight: 600;
+}
+
+.contactInputs button:hover {
+  background-color: rgb(17, 87, 53);
+}
+
+.contactusRight {
+  background-color: rgb(24, 171, 100);
+  grid-area: two;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  background-color: orangered;
+}
+
+.subBox1 {
+}
+
+.contactusRightBox1 {
+  width: 80%;
+  color: white;
+  font-size: 20px;
+
+  display: flex;
+  flex-direction: row;
+
+  gap: 200px;
+}
+
+.subBox1 .address {
+  margin-top: -20px;
+}
+
+.contactusRightBox1 h5,
+.contactusRightBox2 h5 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.contactusRightBox1 p,
+.contactusRightBox2 p {
+  font-size: 16px;
+}
+
+.links {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.subBox1details {
+  display: flex;
+  flex-direction: column;
+}
+
+.links:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.contactusRightBox2 {
+  width: 80%;
+  margin-top: 55px;
+  display: flex;
+  flex-direction: row;
+  gap: 200px;
+
+  color: white;
+}
+
+@media only screen and (max-width: 500px) {
+  .contactus {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contactLeft {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+    background-color: white;
+  }
+
+  .contactLeft img {
+    display: none;
+  }
+
+  .contactLeft h1 {
+    font-size: 30px;
+  }
+
+  .contactLeft p {
+    margin-top: -10px;
+    font-size: 18px;
+  }
+
+  .contactInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contactInputs button {
+    background-color: rgb(0, 136, 71);
+    color: white;
+    font-size: 16px;
+    width: 100px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    padding: 10px 10px;
+    font-weight: 600;
+  }
+
+  .contactInputs button:hover {
+    background-color: rgb(17, 87, 53);
+  }
+
+  .contactusRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    gap: 20px;
+  }
+
+  .contactusRightBox1 {
+    width: 90%;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    gap: 90px;
+  }
+
+  .contactusRightBox1 img {
+    height: 35vh;
+  }
+
+  .contactusRightBox1 h5,
+  .contactusRightBox2 h5 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .contactusRightBox1 p,
+  .contactusRightBox2 p {
+    font-size: 16px;
+  }
+
+  .links {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+  }
+
+  .subBox1details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .links:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+  }
+
+  .contactusRightBox2 {
+    width: 90%;
+
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+
+    color: white;
+  }
+}
