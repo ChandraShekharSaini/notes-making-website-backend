@@ -27,7 +27,7 @@ const App = () => {
             <Route path="notes" element={<Edior />} />
 
           </Route>
-          <Route path="profile" element={<Profile />} />
+          <Route path="/profile" element={<Profile />} />
         </Route>
 
 
