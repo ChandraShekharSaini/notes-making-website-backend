@@ -15,7 +15,7 @@ dotenv.config();
 app.use(cookieParser())
 app.use(
     cors({
-
+        origin: 'https://notes-creating-frontend.onrender.com',
         credentials: true
 
     })
@@ -33,13 +33,13 @@ app.get('/auth/google',
 app.get('/auth/google/callback',
     passportGoogleAuth.authenticate('google', { failureRedirect: 'https://notes-creating-frontend.onrender.com/login', session: false }),
     function (req, res) {
-       
+
 
         const userData = req.user
 
         const token = jwt.sign({ user: req.user }, "jhggyytftyf", { expiresIn: '1h' });
 
-        res.status(200).redirect(`https://notes-creating-frontend.onrender.com/redirecting-to-dashbord?token=${encodeURIComponent(JSON.stringify(token))}`);
+        res.status(200).redirect(`https://notes-creating-frontend.onrender.com/redirecting-to-dashbord?token=${encodeURIComponent(token)}`);
 
     });
 
