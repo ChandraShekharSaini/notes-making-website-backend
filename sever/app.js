@@ -57,8 +57,9 @@ app.get('/auth/google/callback',
 
 import authRoutes from "./routes/auth.routes.js"
 app.use("/api/auth", authRoutes)
-
-
+app.use("/bnm", (req, res, next) => {
+    res.redirect('https://notes-creating-frontend.onrender.com');
+})
 
 
 app.use((err, req, res, next) => {
