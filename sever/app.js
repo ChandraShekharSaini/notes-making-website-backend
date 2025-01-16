@@ -38,9 +38,13 @@ app.get('/auth/google/callback',
         const userData = req.user
 
         const token = jwt.sign({ user: req.user }, "jhggyytftyf", { expiresIn: '1h' });
-           console.log(token)
-           console.log(req.user)
-        res.status(200).redirect(`https://notes-creating-frontend.onrender.com/redirecting-to-dashbord?token=${encodeURIComponent(token)}`);
+        console.log(token)
+        console.log(req.user)
+
+
+        const encodedToken = encodeURIComponent(token);
+        res.redirect(`https://notes-creating-frontend.onrender.com/redirecting-to-dashbord?token=${encodeURIComponent(encodedToken)}`);
+
 
     });
 
