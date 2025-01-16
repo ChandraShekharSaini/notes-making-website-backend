@@ -42,9 +42,15 @@ app.get('/auth/google/callback',
         console.log(req.user)
 
 
-        const encodedToken = encodeURIComponent(token);
-        res.redirect(`https://notes-creating-frontend.onrender.com/redirecting-to-dashbord?token=${encodeURIComponent(encodedToken)}`);
 
+        try {
+            const token = jwt.sign({ user: req.user }, "ghvcgfc88", { expiresIn: '1h' });
+            const encodedToken = encodeURIComponent(token);
+            res.redirect(`https://notes-creating-frontend.onrender.com/redirecting-to-dashbord?token=${encodedToken}`);
+        } catch (error) {
+            console.error("Error generating token:", error);
+            res.redirect('https://notes-creating-frontend.onrender.com/login');
+        }
 
     });
 
